@@ -1,0 +1,23 @@
+{
+  "name": "jwt-server-to-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev-single": "nodemon index.js",
+    "serverA": "PORT=3000 PARTNER_SERVER_PORT=8080 SERVER_NAME=serverA PARTNER_SERVER_NAME=serverB nodemon index.js",
+    "serverB": "PORT=8080 PARTNER_SERVER_PORT=3000 SERVER_NAME=serverB PARTNER_SERVER_NAME=serverA nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
