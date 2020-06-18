@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev-single": "nodemon index.js",
-    "serverA": "PORT=3000 PARTNER_SERVER_PORT=8080 SERVER_NAME=serverA PARTNER_SERVER_NAME=serverB nodemon index.js",
-    "serverB": "PORT=8080 PARTNER_SERVER_PORT=3000 SERVER_NAME=serverB PARTNER_SERVER_NAME=serverA nodemon index.js",
+    "serverA": "PORT=3000 PARTNER_SERVER_PORT=8080 SERVER_NAME=serverA PARTNER_SERVER_NAME=serverB HMAC_SECRET=myscret nodemon index.js",
+    "serverB": "PORT=8080 PARTNER_SERVER_PORT=3000 SERVER_NAME=serverB PARTNER_SERVER_NAME=serverA HMAC_SECRET=mysecret nodemon index.js",
+    "rsaServerA": "PORT=3000 JWT_RSA_PRIVATE_KEY=./serverA-private.key PARTNER_JWT_RSA_PUBLIC_KEY=./serverB-public.key PARTNER_SERVER_PORT=8080 SERVER_NAME=serverA PARTNER_SERVER_NAME=serverB nodemon index.js",
+    "rsaServerB": "PORT=8080 JWT_RSA_PRIVATE_KEY=./serverB-private.key PARTNER_JWT_RSA_PUBLIC_KEY=./serverA-public.key PARTNER_SERVER_PORT=3000 SERVER_NAME=serverB PARTNER_SERVER_NAME=serverA nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

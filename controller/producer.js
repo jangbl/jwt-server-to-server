@@ -6,7 +6,7 @@ async function produce(req, res) {
     const tokenPayload = {
         tokenOrigin: `this token was created by ${config.serverName}`,
     };
-    const token = tokenService.buildToken(config.partnerServerName, tokenPayload);
+    const token = tokenService.buildToken(config.serverName, tokenPayload);
 
     const reqConfig = {
         headers: {
