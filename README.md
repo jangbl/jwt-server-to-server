@@ -8,7 +8,7 @@ This repository is the source code for the [JWT server to server communication i
 
 [![JWT server to server communication](images/jwt-server-to-server.png)](https://www.youtube.com/playlist?list=PL1Nml43UBm6dge_ykMszBCtaSJ9RnxQNJ)
 
-For updates, please follow [@productioncoder](https://twitter.com/productioncoder) on Twitter.
+For updates, please follow [@_jgoebel](https://twitter.com/_jgoebel) on Twitter.
 
 ## 2 How to run this application
 
